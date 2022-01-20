@@ -1,0 +1,30 @@
+
+const getCurrentDay = data => [
+    {
+        name: 'humidity',
+        value: data.condition.humidity,
+        unit: '%',
+    },
+    {
+        name: 'wind',
+        value: Math.round(data.condition.wind_mph),
+        unit: 'km/h',
+    },
+    {
+        name: 'air pressure',
+        value: data.condition.pressure_mb,
+        unit: 'mb',
+    },
+    {
+        name: 'temp_c',
+        value: Math.round(data.condition.temp_c),
+        unit: '°C',
+    },
+    {
+        name: 'feels like',
+        value: Math.round(data.condition.feelslike_c),
+        unit: '°C',
+    },
+];
+
+export default getCurrentDay;
